@@ -35,6 +35,17 @@
         </repository>
     </repositories>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshot</id>
+            <layout>default</layout>
+            <url>file:///${project.basedir}/artifact</url>
+        </snapshotRepository>
+        <repository>
+            <id>repo</id>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>qa.automation</groupId>
