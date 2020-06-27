@@ -32,7 +32,6 @@ public class ReportTest {
     {
         TestData.addAssertStep("verify 1 and 2 are equal",1,2);
         TestData.addTestStep("this is awesome",null);
-        TestData.addAssertStepFailonMismatch("verify a and A are equal","a","A");
         TestData.addAssertStep("verify 1 and 2 are equal",1,2);
 
 
