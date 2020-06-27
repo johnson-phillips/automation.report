@@ -4,63 +4,43 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>qa.automation</groupId>
+    <groupId>automation</groupId>
     <artifactId>report</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <repositories>
-        <repository>
-            <id>aws</id>
-            <url>https://raw.githubusercontent.com/johnson-phillips/qa.automation.aws/master/artifact/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
-        </repository>
-        <repository>
-            <id>annotation</id>
-            <url>https://raw.githubusercontent.com/johnson-phillips/qa.automation.annotations/master/artifact/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
-        </repository>
-    </repositories>
 
     <distributionManagement>
         <snapshotRepository>
-            <id>snapshot</id>
+            <id>github</id>
             <layout>default</layout>
-            <url>file:///${project.basedir}/artifact</url>
+            <url>https://maven.pkg.github.com/johnson-phillips/${groupId}.${artifactId}</url>
         </snapshotRepository>
         <repository>
-            <id>repo</id>
+            <id>github</id>
         </repository>
     </distributionManagement>
 
     <dependencies>
         <dependency>
-            <groupId>qa.automation</groupId>
-            <artifactId>aws</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>qa.automation</groupId>
-            <artifactId>annotations</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.8</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
         </dependency>
     </dependencies>
 
