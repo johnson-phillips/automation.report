@@ -19,6 +19,7 @@ To start capturing test data call startTest method and pass test name and descri
 TestData.startTest(string,string);
 example: TestData.startTest("verify login","test to verify user can login");
 ```
+HTML report gets generated/updated everytime endTest method is called.  
 To add test step, call addTestStep method. This method has 2 - 3 parameters based on different needs.
 To add a simple step, call below method.
 ```
