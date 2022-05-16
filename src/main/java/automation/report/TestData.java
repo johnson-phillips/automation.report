@@ -88,10 +88,10 @@ public class TestData {
             logger.severe( step.name + ":" +step.error);
         }
         if(obj != null){
-            switch (obj.getClass().getName()){
+            switch (obj.getClass().getSimpleName()){
                 case "String": step.screenshot =(String) obj;
                     break;
-                case "boolean": step.isapi =(boolean) obj;
+                case "Boolean": step.isapi =(boolean) obj;
                     break;
                 default:
             }
