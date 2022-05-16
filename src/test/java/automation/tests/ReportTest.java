@@ -32,6 +32,7 @@ public class ReportTest {
     {
         TestData.addAssertStep("verify 1 and 2 are equal",1,2);
         TestData.addTestStep("this is awesome",null);
+        TestData.addTestStep("test step for screenshot",null,"sample base64");
         TestData.addAssertStep("verify 1 and 2 are equal",1,2);
 
 
