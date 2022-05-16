@@ -27,7 +27,7 @@ public class ReportTest {
     public void afterMethod() {
         TestData.endTest();
     }
-    @Test
+    @Test(testName = "Test 1", description = "sample test to show report features")
     public void Test1()
     {
         TestData.addAssertStep("verify 1 and 2 are equal",1,2);
