@@ -307,7 +307,7 @@ public class TestData {
             File htmlFile = new File(reportPath + "report.html");
             File jsonFile = new File(reportPath + "reportdata.json");
             FileUtils.write(htmlFile, HTMLReport.getTemplate(), Charset.forName("UTF-8"), false);
-            FileUtils.write(jsonFile, HTMLReport.reportdata, Charset.forName("UTF-8"), false);
+            FileUtils.write(jsonFile, data, Charset.forName("UTF-8"), false);
             logger.info("------------------------------------Test Finished-------------------------------------------------------");
             return currentTest;
         } catch (Exception ex) {
