@@ -4,6 +4,20 @@ java library to create simple html report for test execution
 usage:
 ```
 add dependency in pom file
+<repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/johnson-phillips/automation.report</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+        </repository>
+    </repositories>
 <dependency>
   <groupId>automation</groupId>
   <artifactId>report</artifactId>
